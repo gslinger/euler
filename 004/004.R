@@ -1,5 +1,4 @@
-# Project Euler Problem [4] # 
-#   by github/aev1tas       #
+# Project Euler Problem [4] #
 #      Brute Force          #
 
 is.palindrome <- function(x) {

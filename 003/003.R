@@ -1,5 +1,4 @@
-# Project Euler Problem [3] # 
-#   by github/aev1tas       #
+# Project Euler Problem [3] #
 
 x <- 600851475143
 p <- 2

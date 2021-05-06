@@ -1,18 +1,17 @@
 """
-The prime factors of 13195 are 5, 7, 13 and 29.
-
-What is the largest prime factor of the number 600851475143 ?
-
+Largest prime factor
 https://projecteuler.net/problem=3
 """
 
 
-def fn(x):
-    p = 2
-    while x > p:
-        while x % p == 0:
-            x /= p
+def largest_prime_factor(n: int) -> int:
+    p: int = 2
+    while n > p:
+        if n % p == 0:
+            n /= p
         p += 1
     return p
 
-answer = fn(600851475143)
+
+print(largest_prime_factor(600851475143))
+# 1.07 ms ± 15.7 µs per loop (mean ± std. dev. of 5 runs, 25 loops each)

@@ -1,22 +1,16 @@
 """
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-
+Smallest multiple
 https://projecteuler.net/problem=5
 """
-from math import gcd
+from math import gcd   # is this cheating? ;)
 
-def fn():
-    x = 1
-    for i in range(1, 21):
+
+def smallest_multiple(n: int) -> int:
+    x: int = 1
+    for i in range(2, (n + 1)):
         x *= i // gcd(i, x)
-    return str(x)
-
-print(fn())
+    return x
 
 
-"""
-%timeit -n 20 fn()
-6.29 µs ± 311 ns per loop (mean ± std. dev. of 7 runs, 20 loops each)
-"""
+print(smallest_multiple(20))
+# 3.77 µs ± 62.3 ns per loop (mean ± std. dev. of 5 runs, 25 loops each)

@@ -1,6 +1,13 @@
-def fn(x):
-    return x * int(999 / x) * (1 + int(999 / x)) / 2
+"""
+Multiples of 3 and 5
+https://projecteuler.net/problem=1
+"""
 
-answer = int(fn(3) + fn(5) - fn(15))
 
-print(answer)
+def multiples_of_a_and_b(n: int, a: int, b: int) -> int:
+    fn = lambda x: x * ((n - 1) // x) * (1 + ((n - 1) // x)) // 2
+    return fn(a) + fn(b) - fn(a * b)
+
+
+print(multiples_of_a_and_b(1000, 3, 5))
+# 1.46 µs ± 36.7 ns per loop (mean ± std. dev. of 5 runs, 25 loops each)

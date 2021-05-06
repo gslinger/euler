@@ -1,31 +1,23 @@
 """
-The sum of the squares of the first ten natural numbers is,
-
-12 + 22 + ... + 102 = 385
-The square of the sum of the first ten natural numbers is,
-
-(1 + 2 + ... + 10)2 = 552 = 3025
-Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
-
-Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
-
+Sum square difference
 https://projecteuler.net/problem=6
 """
 import pandas as pd
+from timeit import timeit
 
 
-def fn():
-    # 514 µs ± 30.3 µs per loop (mean ± std. dev. of 7 runs, 20 loops each)
-    x = pd.Series(range(1, 101))
-    return (x.sum() ** 2) - x.apply(lambda x: x ** 2).sum()
+@timeit
+def sum_square_difference(n: int):
+    x: pd.Series = pd.Series(range(1, (n + 1)))
+    return (x.sum() ** 2) - x.apply(lambda y: y ** 2).sum()
 
 
-print(fn())
+print(sum_square_difference(100))
 
 
 """ Solution i found online and implemented - Significantly faster"""
 
-
+@timeit
 def fn2(n):
     # 1.15 µs ± 72.5 ns per loop (mean ± std. dev. of 7 runs, 20 loops each)
     return int((n**2*(n+1)**2*(1/4)) - (n*(n+1)*((2*n)+1)*(1/6)))

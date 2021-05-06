@@ -1,6 +1,9 @@
 # euler
-Project-Euler Solutions in Python and R. [WIP]
+Project Euler Solutions. Python and some R [WIP]
 
-Feel free to offer suggestions, criticisms or contributions. 
+The R solutions are very old. The Python solutions I am updating and adding too. 
 
-I have tried to make my solutions as efficient as possible, and avoid brute forcing unless necessary. 
+Disclaimer: I am not some number theory whizz so in a lot of cases I will be brute forcing. After solving the problem
+I will look into the mathematical theory and sometimes add additional solutions, assuming I understand how they work ;). 
+
+

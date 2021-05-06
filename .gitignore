@@ -49,3 +49,8 @@ Temporary Items
 *.xml
 python/__pycache__/timeit.cpython-38.pyc
 python/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+*.xml
+*.pyc
+001/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+001/.ipynb_checkpoints/001-checkpoint.ipynb
+001/Untitled.ipynb
